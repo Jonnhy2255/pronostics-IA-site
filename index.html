@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur le site officiel de Pronostics IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background: url('{{ url_for('static', filename='fond-image.jpg') }}') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .welcome-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #28a745;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        .contact-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+        }
+        .contact-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur le site officiel de Pronostics IA</h1>
+        <img src="{{ url_for('static', filename='welcome-image.jpg') }}" alt="Bienvenue" class="welcome-image">
+        <div class="button-container">
+            <a href="{{ url_for('chatbots') }}" class="button">Aller au chatbot store</a>
+        </div>
+    </header>
+    <button class="contact-button" onclick="window.location.href='mailto:billionsjonnhy@gmail.com'">✉</button>
+</body>
+</html>
